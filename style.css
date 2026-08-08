@@ -10,3 +10,15 @@ h1{margin:0;font:700 27px Arial,sans-serif;letter-spacing:2px;color:var(--violet
 .actions{display:grid;gap:12px}.button{display:block;text-align:center;text-decoration:none;padding:14px 18px;border-radius:13px;font:700 14px Arial,sans-serif}.primary{background:var(--violet);color:#fff}.secondary{border:1px solid #d9c6e1;color:var(--violet);background:#fff}
 footer{display:flex;justify-content:space-between;gap:12px;margin-top:30px;padding-top:20px;border-top:1px solid #eee5f1;color:#756b78;font:12px Arial,sans-serif}.made{color:var(--violet);font-weight:700}
 @media(max-width:520px){.card{padding:27px 20px;border-radius:22px}.brand{gap:12px}.monogram{width:56px;height:56px}h1{font-size:21px}.hero h2{font-size:29px}footer{flex-direction:column;text-align:center}}
+
+.logo {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.logo img {
+  width: 180px;
+  max-width: 65%;
+  height: auto;
+  display: inline-block;
+}
