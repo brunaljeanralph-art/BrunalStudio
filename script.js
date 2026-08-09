@@ -1,12 +1,20 @@
+/* =========================================================
+   BRUNAL STUDIO — SCRIPT
+   ========================================================= */
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Small interaction only: keep the page fast and clean.
-  // Links themselves open WhatsApp, Email and Instagram directly.
-  document.querySelectorAll(".action").forEach((button) => {
-    button.addEventListener("click", () => {
-      button.style.opacity = "0.88";
+
+  // Petit effet discret sur les boutons.
+  document.querySelectorAll(".action, .info-row").forEach((link) => {
+
+    link.addEventListener("click", () => {
+      link.style.transform = "scale(0.99)";
+
       setTimeout(() => {
-        button.style.opacity = "";
-      }, 180);
+        link.style.transform = "";
+      }, 120);
     });
+
   });
+
 });

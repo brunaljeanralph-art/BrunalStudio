@@ -3,614 +3,294 @@
    ========================================================= */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #21152f;
-
-    background:
-        radial-gradient(circle at top, rgba(122, 63, 163, .30), transparent 35%),
-        linear-gradient(135deg, #100b16, #1b1024 55%, #09070d);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 25px 15px;
-    overflow-x: hidden;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #25133f;
+  background:
+    radial-gradient(circle at top, rgba(185, 143, 219, 0.22), transparent 42%),
+    linear-gradient(135deg, #fdfaff 0%, #f4edf9 50%, #eee3f6 100%);
 }
 
+/* PAGE */
 
-/* =========================================================
-   MAIN CARD
-   ========================================================= */
-
-.card {
-    width: min(100%, 520px);
-
-    background: rgba(255, 255, 255, .96);
-
-    border-radius: 30px;
-
-    padding: 34px 28px 25px;
-
-    box-shadow:
-        0 0 25px rgba(151, 80, 205, .35),
-        0 20px 60px rgba(0, 0, 0, .55);
-
-    position: relative;
-    overflow: hidden;
-
-    border: 1px solid rgba(255,255,255,.65);
-
-    animation: cardAppear .8s ease;
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 35px 16px 50px;
 }
 
+/* CARD */
 
-/* =========================================================
-   TOP LOGO
-   ========================================================= */
+.contact-card {
+  width: min(100%, 560px);
+  padding: 32px 28px 28px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(122, 63, 163, 0.10);
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(82, 46, 105, 0.18);
+  text-align: center;
+}
+
+/* LOGO */
 
 .brand {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
 }
 
-.brand-logo {
-    width: 125px;
-    height: 125px;
-
-    object-fit: contain;
-
-    display: block;
-
-    margin: 0 auto 10px;
-
-    filter:
-        drop-shadow(0 0 5px rgba(111,59,143,.35));
+.logo {
+  width: 155px;
+  max-width: 55%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
+/* TITLE */
 
-/* =========================================================
-   BRAND NAME
-   ========================================================= */
-
-.brand h1 {
-    margin: 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 29px;
-    letter-spacing: 4px;
-
-    color: #54217c;
-
-    line-height: 1.1;
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 5vw, 2.25rem);
+  line-height: 1.15;
+  color: #6f3695;
+  margin-bottom: 10px;
 }
 
-.brand h1 span {
-    display: block;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 13px;
-
-    letter-spacing: 6px;
-
-    margin-top: 7px;
-
-    color: #755287;
+.profession {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #44384d;
+  font-weight: 600;
 }
 
-
-/* =========================================================
-   CREATOR
-   ========================================================= */
-
-.hero {
-    text-align: center;
-
-    margin-top: 14px;
-    margin-bottom: 25px;
+.separator {
+  width: 48px;
+  height: 3px;
+  margin: 17px auto 22px;
+  border-radius: 10px;
+  background: #7a3fa3;
 }
 
-.hero h2 {
-    color: #54217c;
+/* INFORMATION ROWS */
 
-    font-size: 25px;
-
-    margin-bottom: 7px;
-
-    font-weight: 700;
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  text-align: left;
 }
 
-.hero h2::after {
-    content: "";
-
-    display: block;
-
-    width: 35px;
-    height: 2px;
-
-    margin: 9px auto 10px;
-
-    background: #6f3b8f;
-
-    border-radius: 10px;
+.info-row {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 15px;
+  background: #ffffff;
+  border: 1px solid #eee8f3;
+  border-radius: 15px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 3px 12px rgba(82, 46, 105, 0.07);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 
-.hero .intro {
-    margin: 0 auto;
-
-    max-width: 430px;
-
-    font-size: 15px;
-
-    line-height: 1.5;
-
-    color: #33283a;
+.info-row:hover {
+  transform: translateY(-2px);
+  border-color: rgba(122, 63, 163, .25);
+  box-shadow: 0 7px 18px rgba(82, 46, 105, 0.12);
 }
 
-
-/* =========================================================
-   INFORMATION BOX
-   ========================================================= */
-
-.info {
-    background: #fff;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 5px 22px rgba(69, 35, 82, .12);
-
-    border: 1px solid #eee7f2;
-
-    margin-top: 20px;
+.icon-box {
+  width: 46px;
+  min-width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-/* =========================================================
-   EACH ROW
-   ========================================================= */
-
-.row {
-    display: flex;
-
-    align-items: center;
-
-    gap: 14px;
-
-    min-height: 76px;
-
-    padding: 13px 18px;
-
-    border-bottom: 1px solid #eee7f2;
-
-    background: #fff;
-
-    transition: background .25s ease;
+.icon-box img {
+  width: 43px;
+  height: 43px;
+  object-fit: contain;
+  display: block;
 }
 
-.row:last-child {
-    border-bottom: none;
+.web-icon img {
+  width: 40px;
+  height: 40px;
 }
 
-.row:hover {
-    background: #faf7fc;
+.price-icon {
+  color: #7a3fa3;
+  font-size: 44px;
+  line-height: 1;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
-
-/* =========================================================
-   ICON CONTAINER
-   ========================================================= */
-
-.row > span {
-    width: 42px;
-    min-width: 42px;
-    height: 42px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
+.info-text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-
-/* SVG ICONS */
-
-.row > span img,
-.row-icon {
-    width: 31px;
-    height: 31px;
-
-    object-fit: contain;
-
-    display: block;
+.info-text small {
+  color: #6f3695;
+  font-size: 0.88rem;
+  font-weight: 700;
 }
 
-
-/* =========================================================
-   TEXT INSIDE ROW
-   ========================================================= */
-
-.row small {
-    display: block;
-
-    font-size: 12px;
-
-    color: #806d89;
-
-    margin-bottom: 3px;
-
-    font-weight: 600;
+.info-text strong {
+  color: #30263a;
+  font-size: 0.97rem;
+  line-height: 1.35;
+  font-weight: 500;
+  overflow-wrap: anywhere;
 }
 
-.row strong,
-.row a {
-    display: block;
-
-    font-size: 15px;
-
-    line-height: 1.35;
-
-    color: #24152f;
-
-    text-decoration: none;
-
-    word-break: break-word;
-}
-
-.row a:hover {
-    color: #6f3b8f;
-}
-
-
-/* =========================================================
-   ACTION BUTTONS
-   ========================================================= */
+/* BUTTONS */
 
 .actions {
-    display: grid;
-
-    gap: 12px;
-
-    margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 22px;
 }
 
-.button {
-    min-height: 54px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 10px;
-
-    padding: 14px 18px;
-
-    border-radius: 14px;
-
-    text-decoration: none;
-
-    font-size: 15px;
-
-    font-weight: 700;
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        filter .2s ease;
-
-    box-shadow:
-        0 7px 18px rgba(70, 30, 90, .18);
+.action {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: 13px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(82, 46, 105, 0.16);
+  transition: transform .2s ease, filter .2s ease;
 }
 
-
-/* BUTTON ICON */
-
-.button img {
-    width: 25px;
-    height: 25px;
-
-    object-fit: contain;
+.action:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
 }
 
-
-/* WHATSAPP */
-
-.primary {
-    background: linear-gradient(
-        135deg,
-        #713aa0,
-        #572080
-    );
-
-    color: #fff;
+.action img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+  background: transparent;
 }
 
-.primary img {
-    filter: none;
+.whatsapp-action {
+  background: #7a3fa3;
 }
 
-
-/* EMAIL */
-
-.secondary {
-    background: linear-gradient(
-        135deg,
-        #713aa0,
-        #572080
-    );
-
-    color: #fff;
-
-    border: none;
+.email-action {
+  background: #704096;
 }
 
-
-/* INSTAGRAM */
-
-.instagram-button {
-    background:
-        linear-gradient(
-            135deg,
-            #6f3b8f,
-            #c13584,
-            #f58529
-        );
-
-    color: #fff;
+.instagram-action {
+  background: linear-gradient(90deg, #7a3fa3, #b23e91);
 }
 
-
-/* BUTTON HOVER */
-
-.button:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 10px 25px rgba(70, 30, 90, .30);
-
-    filter: brightness(1.05);
-}
-
-.button:active {
-    transform: scale(.98);
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/* FOOTER */
 
 footer {
-    margin-top: 28px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #eee5f1;
-
-    text-align: center;
-
-    color: #6e6074;
-
-    font-size: 12px;
-
-    line-height: 1.8;
+  margin-top: 25px;
+  text-align: center;
 }
 
-footer .made {
-    color: #54217c;
-
-    font-weight: 700;
-
-    font-size: 13px;
+footer p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #4a3b51;
+  font-weight: 600;
 }
 
+/* MOBILE */
 
-/* =========================================================
-   BACKGROUND DECORATION
-   ========================================================= */
+@media (max-width: 520px) {
 
-body::before {
-    content: "";
+  .contact-page {
+    padding: 18px 10px 35px;
+  }
 
-    position: fixed;
+  .contact-card {
+    padding: 26px 15px 22px;
+    border-radius: 20px;
+  }
 
-    width: 350px;
-    height: 350px;
+  .logo {
+    width: 140px;
+    max-width: 52%;
+  }
 
-    border-radius: 50%;
+  h1 {
+    font-size: 1.65rem;
+  }
 
-    background: rgba(111,59,143,.20);
+  .profession {
+    font-size: 0.88rem;
+  }
 
-    filter: blur(80px);
+  .info-row {
+    min-height: 72px;
+    gap: 12px;
+    padding: 10px 12px;
+  }
 
-    top: -120px;
-    left: -120px;
+  .icon-box {
+    width: 43px;
+    min-width: 43px;
+    height: 43px;
+  }
 
-    pointer-events: none;
+  .icon-box img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .info-text small {
+    font-size: 0.82rem;
+  }
+
+  .info-text strong {
+    font-size: 0.88rem;
+  }
+
+  .action {
+    font-size: 0.93rem;
+    min-height: 53px;
+  }
 }
 
-body::after {
-    content: "";
+/* REDUCED MOTION */
 
-    position: fixed;
-
-    width: 300px;
-    height: 300px;
-
-    border-radius: 50%;
-
-    background: rgba(190,100,230,.15);
-
-    filter: blur(90px);
-
-    bottom: -100px;
-    right: -100px;
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   ANIMATION
-   ========================================================= */
-
-@keyframes cardAppear {
-
-    from {
-        opacity: 0;
-        transform: translateY(25px) scale(.97);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-    body {
-        padding: 15px 10px;
-
-        align-items: flex-start;
-    }
-
-    .card {
-        width: 100%;
-
-        margin: 10px auto;
-
-        padding: 27px 15px 22px;
-
-        border-radius: 25px;
-    }
-
-    .brand-logo {
-        width: 110px;
-        height: 110px;
-    }
-
-    .brand h1 {
-        font-size: 25px;
-        letter-spacing: 3px;
-    }
-
-    .brand h1 span {
-        font-size: 11px;
-        letter-spacing: 5px;
-    }
-
-    .hero h2 {
-        font-size: 23px;
-    }
-
-    .hero .intro {
-        font-size: 14px;
-        padding: 0 5px;
-    }
-
-    .row {
-        min-height: 70px;
-
-        padding: 12px 13px;
-
-        gap: 11px;
-    }
-
-    .row > span {
-        width: 38px;
-        min-width: 38px;
-    }
-
-    .row > span img,
-    .row-icon {
-        width: 28px;
-        height: 28px;
-    }
-
-    .row small {
-        font-size: 11px;
-    }
-
-    .row strong,
-    .row a {
-        font-size: 14px;
-    }
-
-    .button {
-        min-height: 52px;
-
-        font-size: 14px;
-
-        padding: 13px 12px;
-    }
-
-    .button img {
-        width: 23px;
-        height: 23px;
-    }
-
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 360px) {
-
-    .card {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    .brand-logo {
-        width: 95px;
-        height: 95px;
-    }
-
-    .brand h1 {
-        font-size: 22px;
-    }
-
-    .hero h2 {
-        font-size: 21px;
-    }
-
-    .row {
-        padding: 10px;
-    }
-
-    .row strong,
-    .row a {
-        font-size: 13px;
-    }
-
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
 }
