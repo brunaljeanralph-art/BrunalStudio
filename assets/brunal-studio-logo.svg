@@ -1,7 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180">
-<rect width="600" height="180" rx="28" fill="#6f3b8f"/>
-<circle cx="90" cy="90" r="58" fill="#fff"/>
-<text x="90" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#6f3b8f">BR</text>
-<text x="175" y="88" font-family="Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="4" fill="#fff">BRUNAL</text>
-<text x="177" y="123" font-family="Georgia, serif" font-size="21" letter-spacing="5" fill="#d9bce7">STUDIO</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" role="img" aria-labelledby="title desc">
+<title id="title">Brunal Studio</title>
+<desc id="desc">Logo violet de Brunal Studio avec tulipe et monogramme JB.</desc>
+<g fill="none" stroke="#7026a9" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M390 28c120 12 193 82 205 166 8 58-15 103-55 128" stroke-width="10"/>
+  <path d="M250 75c-42 25-58 70-38 104" stroke-width="8"/>
+</g>
+<g fill="#7026a9">
+  <path d="M272 87c-2-42 28-70 56-82 8 29-3 61-56 82z"/>
+  <path d="M270 91c28-19 56-47 67-78 18 37 8 72-25 93z"/>
+  <path d="M242 130c-38 18-45 51-31 78 35-5 52-31 31-78z"/>
+  <text x="292" y="183" font-family="Georgia,serif" font-size="154" font-weight="500">JB</text>
+  <text x="350" y="252" text-anchor="middle" font-family="Georgia,serif" font-size="67" letter-spacing="9">BRUNAL</text>
+  <text x="350" y="302" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="10">STUDIO</text>
+  <rect x="86" y="286" width="105" height="4" rx="2"/>
+  <rect x="509" y="286" width="105" height="4" rx="2"/>
+  <path d="M315 330h80" stroke="#7026a9" stroke-width="4"/>
+  <path d="M350 321c-20-22-54 7 0 38 54-31 20-60 0-38z"/>
+</g>
 </svg>
