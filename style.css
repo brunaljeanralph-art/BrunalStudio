@@ -1,43 +1,264 @@
-*{box-sizing:border-box}
-:root{--violet:#6f3b8f;--lavender:#b98bd0;--ink:#241d29;--soft:#faf7fc}
-html{scroll-behavior:smooth}
-body{margin:0;min-height:100vh;font-family:Georgia,"Times New Roman",serif;background:linear-gradient(135deg,#f7f1fa,#fff);color:var(--ink);display:flex;justify-content:center;align-items:center;padding:24px}
-.card{width:min(680px,100%);background:#fff;border:1px solid #eadff0;border-radius:28px;padding:42px;box-shadow:0 18px 55px rgba(62,32,75,.12)}
-.brand{display:flex;align-items:center;gap:18px}
-.logo{width:68px;height:68px;object-fit:contain;flex-shrink:0}
-h1{margin:0;font:700 27px Arial,sans-serif;letter-spacing:2px;color:var(--violet)}
-h1 span{font-weight:400;color:#4b4050}
-.brand p{margin:7px 0 0;font-size:13px;color:#766b79}
-.divider{height:1px;background:#e7dbea;margin:30px 0}
-.hero{text-align:center}
-.eyebrow{font:700 11px Arial,sans-serif;letter-spacing:3px;color:var(--lavender);margin:0 0 8px}
-.hero h2{margin:0;color:var(--violet);font-size:34px}
-.intro{max-width:510px;margin:12px auto 0;line-height:1.7;color:#655b68}
-.info{margin:32px 0 24px;background:var(--soft);border-radius:20px;padding:10px 20px}
-.row{display:flex;gap:15px;align-items:center;padding:15px 0;border-bottom:1px solid #eee5f1}
-.row:last-child{border:0}
-.row>span,.row>img{width:28px;height:28px;flex:0 0 28px;object-fit:contain}
-.row small{display:block;color:#8b7f8f;font:12px Arial,sans-serif;margin-bottom:3px}
-.row strong{font-size:16px;color:var(--ink)}
-.link-row{text-decoration:none;color:inherit}
-.link-row:hover strong{color:var(--violet)}
-.actions{display:grid;gap:12px}
-.button{display:flex;align-items:center;justify-content:center;gap:10px;text-align:center;text-decoration:none;padding:14px 18px;border-radius:13px;font:700 14px Arial,sans-serif;transition:.2s}
-.button img{width:20px;height:20px;object-fit:contain}
-.button:hover{transform:translateY(-1px)}
-.whatsapp{background:#25D366;color:#fff}
-.email{background:#fff;border:1px solid #d9c6e1;color:var(--violet)}
-.instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);color:#fff}
-footer{display:flex;justify-content:space-between;gap:12px;margin-top:30px;padding-top:20px;border-top:1px solid #eee5f1;color:#756b78;font:12px Arial,sans-serif}
-.made{color:var(--violet);font-weight:700}
-@media(max-width:520px){
- body{padding:14px}
- .card{padding:27px 20px;border-radius:22px}
- .brand{gap:12px}
- .logo{width:56px;height:56px}
- h1{font-size:21px}
- .hero h2{font-size:29px}
- .intro{font-size:15px}
- .row strong{font-size:15px;overflow-wrap:anywhere}
- footer{flex-direction:column;text-align:center}
+/* =========================================================
+   BRUNAL STUDIO — CONTACT PAGE
+   Responsive: mobile first
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --violet: #6f3b8f;
+  --violet-dark: #54256f;
+  --violet-soft: #efe5f5;
+  --ink: #2c2430;
+  --muted: #776b7d;
+  --line: #eadff0;
+  --page: #faf7fc;
+  --white: #ffffff;
+  --green: #25d366;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 22px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(185,139,208,.18), transparent 32%),
+    radial-gradient(circle at 90% 85%, rgba(111,59,143,.10), transparent 34%),
+    var(--page);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.contact-card {
+  width: min(100%, 470px);
+  margin: 0 auto;
+  padding: 28px 20px 22px;
+  background: rgba(255,255,255,.97);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: 0 18px 50px rgba(62,32,75,.14);
+}
+
+/* ---------- BRAND ---------- */
+
+.brand {
+  text-align: center;
+}
+
+.brand-logo {
+  display: block;
+  width: min(235px, 70%);
+  height: auto;
+  margin: 0 auto 10px;
+}
+
+.brand h1 {
+  margin: 0;
+  color: var(--violet);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(21px, 6vw, 27px);
+  letter-spacing: .4px;
+}
+
+.tagline {
+  margin: 7px 0 0;
+  color: #4e4452;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.motto {
+  margin: 12px auto 0;
+  max-width: 340px;
+  color: var(--violet);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ---------- CONTACT ROWS ---------- */
+
+.contact-list {
+  margin-top: 25px;
+  padding: 7px 14px;
+  background: #fbf9fc;
+  border: 1px solid #eee6f2;
+  border-radius: 18px;
+}
+
+.contact-row {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 2px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-row:last-child {
+  border-bottom: 0;
+}
+
+.contact-row:hover .contact-text strong {
+  color: var(--violet);
+}
+
+.contact-icon {
+  width: 25px !important;
+  height: 25px !important;
+  min-width: 25px;
+  max-width: 25px;
+  object-fit: contain;
+  display: block;
+  flex: 0 0 25px;
+}
+
+.contact-text {
+  min-width: 0;
+  display: block;
+}
+
+.contact-text small {
+  display: block;
+  margin-bottom: 2px;
+  color: #8b7e90;
+  font: 11px/1.2 Arial, Helvetica, sans-serif;
+}
+
+.contact-text strong {
+  display: block;
+  overflow-wrap: anywhere;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 600;
+  transition: color .2s ease;
+}
+
+.price-icon {
+  width: 25px;
+  min-width: 25px;
+  text-align: center;
+  color: var(--violet);
+  font: 700 22px Arial, sans-serif;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.action {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 16px;
+  border-radius: 13px;
+  text-decoration: none;
+  font: 700 14px Arial, Helvetica, sans-serif;
+  transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+}
+
+.action:hover {
+  transform: translateY(-1px);
+}
+
+.action img {
+  width: 21px !important;
+  height: 21px !important;
+  min-width: 21px;
+  max-width: 21px;
+  object-fit: contain;
+}
+
+.whatsapp-action {
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 7px 18px rgba(37,211,102,.20);
+}
+
+.email-action {
+  background: var(--violet);
+  color: #fff;
+  box-shadow: 0 7px 18px rgba(111,59,143,.20);
+}
+
+.instagram-action {
+  background: linear-gradient(135deg, #833ab4, #e1306c 55%, #f77737);
+  color: #fff;
+  box-shadow: 0 7px 18px rgba(225,48,108,.18);
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: #756b78;
+  font: 11px/1.5 Arial, Helvetica, sans-serif;
+}
+
+footer p {
+  margin: 4px 0;
+}
+
+footer .made {
+  color: var(--violet);
+  font-weight: 700;
+}
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width: 360px) {
+  body {
+    padding: 12px 9px;
+  }
+
+  .contact-card {
+    padding: 23px 14px 18px;
+    border-radius: 22px;
+  }
+
+  .brand-logo {
+    width: 205px;
+  }
+
+  .tagline {
+    font-size: 12px;
+  }
+
+  .motto {
+    font-size: 14px;
+  }
+
+  .contact-list {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .contact-text strong {
+    font-size: 14px;
+  }
+
+  .action {
+    font-size: 13px;
+  }
 }
